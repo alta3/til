@@ -6,7 +6,8 @@ My memory is probably not consistant on this point because, as [noted by @flyte]
 
 > It's inconsistent with [python] requests and curl and is a bit astonishing once you finally work out why your requests aren't working properly.
 
-Here's the documentation and the solution:
+Long story short, aiohttp will (IMO paternilistically) perform url escapes and encoding unless explicitly told not to. 
+Here's the documentation and the solution if you find yourself scratching your head why your url parameters aren't making it to the server correctly:
 
 > *aiohttp* internally performs URL canonicalization before sending request.
 > 
